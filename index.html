@@ -11,6 +11,16 @@
             width: 500px;
             margin: 20px auto;
         }
+        #result {
+            width: 500px;
+            margin: 20px auto;
+        }
+        p{
+            margin-top: 20px;
+        }
+        img{
+            margin-top:10px;
+        }
     </style>
 </head>
 <body>
@@ -18,10 +28,12 @@
             <input type="text" size="10" id="lengthOfArray">
             <button id="getUserInputLength">Give me the length of an array!</button>
     </div>
+    <div id="result"></div>
     <script>
         // create unsorted array
         let unsortedArrayDom = document.createElement("p");
         // create different function to do sort
+        let br = document.createElement("br");
         let insertSt = document.createElement("p");
         let insertStBr = document.createElement("p");
         let bubbleSt = document.createElement("p");
@@ -32,8 +44,7 @@
         let bubbleStImg = new Image();
         let bubbleStBrImg = new Image();
 
-        let getDiv = document.getElementById("main");
-        console.log(getDiv);
+        let getDiv = document.getElementById("result");
         
         let handleUserInput = document.getElementById("getUserInputLength");
         handleUserInput.addEventListener('click', function(e){
@@ -118,7 +129,7 @@
                 bubbleStImg.src = "./img/bubbleStImg.png";
                 bubbleStImg.setAttribute('style', 'width:500px;');
                 getDiv.appendChild(bubbleSt);
-                getDiv.appendChild(bubbleStImg)
+                getDiv.appendChild(bubbleStImg);
 
                 let bubbleSortBetter = function(arr){
                     let swapped;
